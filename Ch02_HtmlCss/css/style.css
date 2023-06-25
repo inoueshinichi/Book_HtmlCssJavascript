@@ -1,0 +1,16 @@
+/* 独自CSS */
+@import url(sanitize.css)
+
+h1 {
+    font-size: 24px;
+    margin: 0;
+}
+/* p {
+    font-size: 14px;
+} */
+
+.content {
+    background-color: #fff;/*fuchsia;#fcc;*/
+    width: 600px;
+    margin: 10px auto;
+}
