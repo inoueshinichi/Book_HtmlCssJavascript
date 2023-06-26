@@ -1,5 +1,5 @@
 /* 独自CSS */
-@import url(sanitize.css)
+@import url(sanitize.css);
 
 h1 {
     font-size: 24px;
@@ -13,4 +13,43 @@ h1 {
     background-color: #fff;/*fuchsia;#fcc;*/
     width: 600px;
     margin: 10px auto;
+}
+
+input {
+    border-bottom: 1px solid #d1d1d1;
+    font-size: 1.2em;
+    width: 100%;
+    padding: 8px;
+}
+
+button {
+    width: 100%;
+    background-color: #2096F3;
+    color: #fff;
+    padding: 15px;
+    border-radius: 3px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.4);
+}
+
+.control {
+    margin-bottom: 3em;
+}
+
+/* labelをインラインからブロックに変更 */
+label {
+    display: block;
+    margin-bottom: .5em;
+}
+
+.required {
+    margin-left: .3em; /* 左の余白を0.3em(1文字の30%)に設定 */
+    color: #f33;
+    font-size: .9em; /* フォントサイズを1文字の90%に設定 */
+    padding: 3px;
+    background-color: #fee;
+    font-weight: bold;
+}
+
+body {
+    background-color: #fafafa;
 }
