@@ -51,6 +51,49 @@ header h1 {
     clear: left;
 }
 
+.content {
+    background-color: #fff;
+    padding: 20px;
+}
+
+.songs {
+    margin: 0 0 20px;
+}
+
+.songs h2 {
+    clear: left;
+    font-size: 100%;  /* フォントサイズを本文と同じにする */
+    font-weight: normal;
+    margin: 0;
+    background-color: #E6E4DD;
+    padding: 5px 10px;
+}
+
+.songs ol {
+    /* padding: 0; */
+    /* margin: 0; */
+    list-style: deciaml inside;
+}
+
+.songs li {
+    border-bottom: 1px solid #ccc;
+    width: 50%; /* リストの総数の前半をページの左側に配置する */
+    float: left; /* リストの後半をページの右側に配置 */
+    padding: 5px 10px;
+}
+
+/* clerfixによる, float:left;時の回り込みによる高さ不定(0)になる現象を解除する裏技テクニック */
+.clearfix:after {
+    content: " ";
+    display: table;
+    clear: both;
+}
+
+a {
+    color: #666;
+    /* text-decoration: none; */
+}
+
 
 
 
