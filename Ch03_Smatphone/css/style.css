@@ -10,7 +10,8 @@ body {
 }
 
 .container {
-    width: 800px;
+    /* width: 800px; */
+    max-width: 800px;
     margin: 0 auto;
     box-shadow: 0 0 10px rgba(0,0,0,.3);
 }
@@ -45,7 +46,15 @@ header h1 {
 .description img {
     clear: left;
     float: left;
-    margin: 10px 10px 10px 0;
+    margin: 0 10px 10px 0;
+    transition-property: opacity;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+}
+
+.description img:hover {
+    opacity: .5;
 }
 
 .description {
@@ -111,5 +120,22 @@ header h1 {
         float: none;
         display: block;
         margin: 0 auto;
+    }
+
+    header {
+        padding: 5px;
+    }
+
+    header h1 {
+        font-size: 12px;
+    }
+
+    .description h1 {
+        font-size: 14px;
+    }
+
+    .songs li {
+        float: none;
+        width: inherit;
     }
 }
