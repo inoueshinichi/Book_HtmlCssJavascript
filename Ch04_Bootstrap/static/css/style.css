@@ -19,3 +19,14 @@ h1 {
 .align-right {
     text-align: right;
 }
+
+.form-group:first-child label {
+    font-weight: bold;
+}
+
+@media screen and (max-width: 992px) {
+    .radio-inline {
+        display: block;
+        margin: 0 !important;
+    }
+}
