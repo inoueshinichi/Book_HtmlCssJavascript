@@ -1,0 +1,30 @@
+[
+    {
+        "path": "../static/images/壁紙1.jpg",
+        "name": "壁紙1",
+        "width": 600,
+        "height": 450,
+        "caption": "大学で撮った空"
+    },
+    {
+        "path": "../static/images/壁紙2.jpg",
+        "name": "壁紙2",
+        "width": 600,
+        "height": 450,
+        "caption": "ドイツで撮ったロードスター"
+    },
+    {
+        "path": "../static/images/壁紙3.jpg",
+        "name": "壁紙3",
+        "width": 600,
+        "height": 450,
+        "caption": "大好きな猫さん"
+    },
+    {
+        "path": "../static/images/壁紙4.jpeg",
+        "name": "壁紙4",
+        "width": 600,
+        "height": 450,
+        "caption": "大学のイチョウ並木"
+    }
+]
