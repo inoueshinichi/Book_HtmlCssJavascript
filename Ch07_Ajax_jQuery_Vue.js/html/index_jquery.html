@@ -32,7 +32,7 @@
     <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
 
     <!-- local JS -->
-    <!-- <script src="../static/js/photo.js"></script> -->
+    <script src="../static/js/photo_jquery.js"></script>
 
     <!-- Title -->
     <title>My Photos</title>
@@ -63,51 +63,6 @@
             <p>&copy; shinichi inoue</p>
         </footer>
     </div><!-- container3 -->
-
-    <!-- JavaScript Section -->
-    <script>
-        var ajax = new XMLHttpRequest();
-        ajax.open('GET', '../static/images.json');
-        ajax.responseType = 'json';
-        ajax.send(null);
-
-        ajax.onreadystatechange = function() {
-            if (ajax.readyState == XMLHttpRequest.DONE && ajax.status == 200) {
-
-                var img;
-                var caption;
-                var div;
-
-                for (var i = 0; i < images.length; i++) {
-                    var data = this.response[i];
-                    img = document.createElement('img');
-                    img.setAttribute('src', data.path);
-                    img.setAttribute('width', data.width);
-                    img.setAttribute('height', data.height);
-                    document.getElementById('img_unit').appendChild(img);
-
-                    caption = document.createElement('div');
-                    caption.className = 'inner';
-                    caption.innerHTML = '<p>' + data.caption + '<span>' + data.name + '</span></p>';
-
-                    div = document.createElement('div');
-                    div.className = 'photo';
-                    div.appendChild(img);
-                    div.appendChild(caption);
-
-                    document.getElementById('img_unit').appendChild(div)
-                }
-            }
-        }
-
-        
-
-        // alert(images[0].caption);
-
-        
-
-        
-    </script>
 </body>
 
 </html>
