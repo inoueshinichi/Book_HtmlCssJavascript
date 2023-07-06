@@ -50,7 +50,7 @@
 
     <div class="container">
        <p id="timer">00:00:00</p>
-
+       
        <div>
         <button id="start_stop" class="btn btn-lg btn-primary">START</button>
        </div>
@@ -64,6 +64,88 @@
             <p>&copy; shinichi inoue</p>
         </footer>
     </div><!-- container3 -->
+
+    <!-- JavaScript Section -->
+    <script>
+        // document.getElementById('timer').innerHTML = '00:01:00';
+        // document.getElementById('timer').innerHTML = '00:02:00';
+        // document.getElementById('timer').innerHTML = '00:03:00';
+        // document.getElementById('timer').innerHTML = '00:04:00';
+        // document.getElementById('timer').innerHTML = '00:05:00';
+        // document.getElementById('timer').remove();
+
+        // const now = new Date();
+        // const seconds = now.getSeconds();
+        // document.getElementById('timer').innerHTML = seconds;
+
+        var addZero = function(value) {
+            if (value < 10) {
+                value = '0' + value;
+            }
+            return value;
+        }
+
+        // イベント・ドリブン
+        // document.getElementById('start_stop').addEventListener('click', function() {
+        //     const now = new Date();
+        //     var seconds = now.getSeconds();
+        //     seconds = addZero(seconds);
+        //     var minutes = now.getMinutes();
+        //     minutes = addZero(minutes);
+        //     var hours = now.getHours();
+        //     hours = addZero(hours);
+
+        //     document.getElementById('timer').innerHTML = hours + ":" + minutes + ":" + seconds;
+        // });
+
+        // document.getElementById('start_stop').addEventListener('click', function() {
+        //     var start = new Date();
+        //     document.getElementById('timer').innerHTML = start.getTime();
+        // });
+
+        var start;
+        var timer_id;
+        document.getElementById('start_stop').addEventListener('click', function() {
+
+            if (this.innerHTML == 'START') {
+                start = new Date();
+
+                timer_id = setInterval(goTimer, 10); // 10ms
+
+                // STOPボタンにする
+                this.innerHTML = "STOP";
+                this.classList.remove("btn-primary");
+                this.classList.add('btn-danger');
+            } else {
+                clearInterval(timer_id);
+
+                // STARTボタンにする
+                this.innerHTML = "START";
+                this.classList.remove('btn-danger');
+                this.classList.add('btn-primary');                
+            }
+        });
+
+        // タイマー処理
+        var goTimer = function() {
+            var now = new Date();
+
+            var milli = now.getTime() - start.getTime();
+            var seconds = Math.floor(milli / 1000); // s
+            var minutes = Math.floor(seconds / 60); // m
+            var hours = Math.floor(minutes / 60); // h
+
+            seconds = seconds - minutes * 60;
+            minutes = minutes - hours * 60;
+
+            hours = addZero(hours);
+            minutes = addZero(minutes);
+            seconds = addZero(seconds);
+
+            document.getElementById('timer').innerHTML = hours + ":" + minutes + ":" + seconds;
+        }
+        
+    </script>
 </body>
 
 </html>
