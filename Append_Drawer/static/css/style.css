@@ -1,0 +1,127 @@
+@charset "UTF-8";
+
+/* ドロワーナビゲーション */
+#nav {
+    position: fixed;
+    right: -270px;
+    top: 0;
+    width: 270px;
+    height: 100%;
+    z-index: 100;
+}
+
+#wrapper {
+    z-index: 200;
+}
+
+.show {
+    transform: translate3d(-270px, 0, 0);
+}
+
+#wrapper,
+#nav {
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+}
+
+/* ヘッダー */
+header {
+    width: 100%;
+    display: flex;
+        justify-content: space-between;
+        background-color: darkturquoise;
+        color: white;
+        border-bottom: 10px solid yellow;
+}
+
+.title-block {
+    flex: 1 1 auto;
+}
+
+.title-block h1 {
+    margin-top: 16px;
+    margin-left: 16px;
+    font-size: 32px;
+}
+
+.title-block h2 {
+    margin-left: 24px;
+    font-size: 16px;
+}
+
+.hamburger {
+    flex: 0 0 32px;
+    align-self: center;
+    margin-left: 16px;
+    margin-right: 16px;
+    text-align: center;
+}
+
+/* メニュー */
+#nav {
+    padding: 24px 24px 0 24px;
+    background-color: black;
+    color: white;
+}
+
+
+
+/* コンテンツ */
+.key {
+    width: 100%;
+}
+
+.key img {
+    max-width: 100%;
+}
+
+main .container {
+    max-width: 100%;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.container .archive-box {
+    display: flex;
+    justify-content: space-around;
+}
+
+.archive-box .figure {
+    max-width: 160px;
+}
+
+/* Cookie */
+#cookie_panel {
+    position: fixed;
+    bottom: 0;
+    margin: 0;
+    padding-top: 10px;
+    width: 100%;
+    background-color: rgba(32, 32, 32, 0.7);
+    z-index: 200;
+    color: white;
+}
+
+#cookie_panel p {
+    margin-right: 10 px;
+    text-align: left;
+}
+
+#btn_cookie_agree {
+    margin: 15px;
+    padding: 0;
+    transition-property: opacity;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+}
+
+#btn_cookie_remove {
+    margin: 15px;
+    padding: 0;
+    transition-property: opacity;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+}
